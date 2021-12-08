@@ -33,23 +33,17 @@ public class BackendApplication {
 		};
 	}
 
-    private Product createProduct(ProductRepository productRepo, String name, String time) {
+    private Product createProduct(ProductRepository productRepo, String productName) {
         Instant instant = Instant.parse(time);
         Product product = new Product();
-
         product.setName(name);
-        product.setproduct_date(instant);
         return productRepo.save(product);
     }
 
-    private Seller createSeller(SellerRepository sellerRepo, Product product, String f_name, String l_name, String email, int age) {
+    private Seller createSeller(SellerRepository sellerRepo, String sellerName) {
         Seller seller = new Seller();
 
-        seller.setFirst_name(f_name);
-        seller.setLast_name(l_name);
-        seller.setAge(age);
-        seller.setEmail(email);
-        seller.setProduct(product);
+        seller.setSellerName(sellerName);
         return sellerRepo.save(seller);
     }
 
