@@ -34,7 +34,6 @@ public class BackendApplication {
 	}
 
     private Product createProduct(ProductRepository productRepo, String productName) {
-        Instant instant = Instant.parse(time);
         Product product = new Product();
         product.setName(name);
         return productRepo.save(product);
