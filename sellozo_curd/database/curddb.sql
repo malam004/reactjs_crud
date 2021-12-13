@@ -1,4 +1,4 @@
-CREATE DATABASE sellozo_curd
+CREATE DATABASE sellozo_crud
 
 
 CREATE TABLE [IF NOT EXISTS] Product(
